@@ -25,7 +25,17 @@ header {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 3%;
+}
+
+.logo {
+  display: flex;
+  align-self: flex-end;
+  list-style: none;
+}
+
+.union {
+  list-style: none;
 }
 
 h2 {
@@ -43,9 +53,10 @@ h2 {
 }
 
 .headline {
-  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
   padding-left: 5%;
-  background-image: url("/images/header-shapes\ mobile.png");
+  background-image: url(/images/header-shapes\ mobile.png);
   background-repeat: no-repeat;
 }
 
@@ -62,13 +73,10 @@ h2 {
   display: flex;
   justify-content: space-between;
   max-width: 150px;
+  list-style: none;
+  padding-inline-start: 0;
 }
 
 .icons > img:hover {
   box-shadow: 2px 3px 5px 1px blue;
-}
-
-.logo {
-  display: flex;
-  align-self: flex-end;
 }
