@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@Shakir-Hussain12 
-microverseinc
-/
-linters-config
-Public
-Code
-Issues
-27
-Pull requests
-3
-Actions
-Projects
-Security
-Insights
-linters-config/html-css/.github/workflows/linters.yml
-@bellom
-bellom Update ubuntu version
-Latest commit f88b17c on Aug 22
- History
- 8 contributors
-@SpaYco@MauricioRobayo@sinansevgi@Meltrust@MacCrazyman@nidalaa@bolah2009@bellom
-56 lines (53 sloc)  1.91 KB
-
 name: Linters
 
 on: pull_request
@@ -85,18 +54,3 @@ jobs:
       - name: Check node_modules existence
         run: |
           if [ -d "node_modules/" ]; then echo -e "\e[1;31mThe node_modules/ folder was pushed to the repo. Please remove it from the GitHub repository and try again."; echo -e "\e[1;32mYou can set up a .gitignore file with this folder included on it to prevent this from happening in the future." && exit 1; fi
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-linters-config/linters.yml at master · microverseinc/linters-config
