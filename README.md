@@ -23,7 +23,11 @@ After you're finished please remove all the comments and instructions!
 -->
 
 <div align="center">
-  <h3><b>Mobile Portfolio</b></h3>
+
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h3><b>Microverse README Template</b></h3>
 
 </div>
 
@@ -67,14 +71,7 @@ After you're finished please remove all the comments and instructions!
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:Shakir-Hussain12/Mobile-Portfolio.git
-```
---->
+> git clone git@github.com:Shakir-Hussain12/Mobile-Portfolio.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,8 +86,6 @@ Example commands:
 - GitHub: [@githubhandle](https://github.com/Shakir-Hussain12)
 - Twitter: [@twitterhandle](https://twitter.com/S_Hussain_99)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/shakir-hussain-2129a121b/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
