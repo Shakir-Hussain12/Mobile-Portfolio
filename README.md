@@ -67,14 +67,7 @@ After you're finished please remove all the comments and instructions!
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:Shakir-Hussain12/Mobile-Portfolio.git
-```
---->
+> git clone git@github.com:Shakir-Hussain12/Mobile-Portfolio.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
