@@ -10,8 +10,9 @@ body {
 }
 
 .wrapper {
-  width: 378px;
+  max-width: 378px;
   height: 718px;
+  margin: 0 auto;
 }
 
 header {
