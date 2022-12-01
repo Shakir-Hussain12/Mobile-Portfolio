@@ -42,12 +42,14 @@ h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
+  font-style: normal;
   color: #172b4d;
 }
 
 .body-text {
   font-weight: 400;
   font-size: 16px;
+  font-style: normal;
   line-height: 24px;
   color: #344563;
 }
@@ -64,9 +66,11 @@ h2 {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  font-style: normal;
   color: #7f8cff;
   text-transform: uppercase;
   margin-bottom: 0;
+  list-style: none;
 }
 
 .socials {
