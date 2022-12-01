@@ -19,6 +19,8 @@
   "homepage": "https://github.com/Shakir-Hussain12/Mobile-Portfolio#readme",
   "devDependencies": {
     "hint": "^2.0.0",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
