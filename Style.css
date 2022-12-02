@@ -156,3 +156,162 @@ h1 {
   justify-content: space-between;
   max-width: 70%;
 }
+
+.normal-button,
+.resume-button {
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  width: 124px;
+  height: 48px;
+  padding: 12px;
+  gap: 10px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #396df2;
+  text-align: center;
+}
+
+.resume-button {
+  width: 168px;
+}
+
+.about {
+  padding-top: 30%;
+  background: white;
+}
+
+.about > h1 {
+  margin-bottom: 0;
+}
+
+.skill-list {
+  padding: 10% 0;
+}
+
+.skill-list > ul {
+  padding-inline-start: 2%;
+}
+
+.list-item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  max-width: 250px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item > span > img:hover {
+  box-shadow: 2px 3px 5px 1px blue;
+}
+
+hr.solid {
+  border-top: 1px solid #dfe1e6;
+  margin-inline-start: 0;
+  width: 327px;
+}
+
+.sub-language {
+  background: #f7f7f9;
+  width: 303px;
+  height: 66.72px;
+  border-radius: 8px;
+  padding: 2% 5%;
+  margin: 4% 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-extend {
+  padding-inline-start: 0;
+}
+
+.inside-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #253858;
+}
+
+.content {
+  background: url("./images/Contact.png");
+  text-align: center;
+  color: white;
+  margin-top: -718px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 330px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+input {
+  height: 50px;
+  padding: 13px;
+  font-weight: 400;
+  font-size: 17px;
+  border-radius: 10px;
+  line-height: 20px;
+  color: #172b4d;
+  border: 1px solid#CFD8DC;
+}
+
+textarea {
+  border-radius: 10px;
+  color: gray;
+  padding: 10px;
+  border: 1px solid#CFD8DC;
+}
+
+button {
+  width: 140px;
+  height: 48px;
+  border-radius: 10px;
+  background: white;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #6070ff;
+  border: 1px solid#CFD8DC;
+}
+
+.normal-button:hover,
+.resume-button:hover,
+button:hover {
+  background: #6070ff;
+  color: white;
+}
+
+button:disabled {
+  border: 1px solid #c1c7d0;
+  color: #5e6c84;
+}
+
+.connect:hover {
+  color: green;
+}
+
+.eclipse {
+  position: relative;
+  top: 15px;
+  left: 153px;
+}
+
+.round {
+  border-top: 2px solid #0d141e;
+  margin: 0 auto;
+  width: 100px;
+  border-radius: 10px;
+}
