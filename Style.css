@@ -58,7 +58,8 @@ h1 {
   color: var(--blue-color);
 }
 
-.headline,.about {
+.headline,
+.about {
   display: flex;
   flex-direction: column;
   padding-left: 5%;
