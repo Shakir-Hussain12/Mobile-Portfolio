@@ -124,6 +124,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   max-width: 90%;
+  padding-inline-start: 0;
 }
 
 .client {
