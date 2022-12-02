@@ -1,6 +1,14 @@
+:root {
+  --blue-color: #344563;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
+}
+
+li {
+  list-style: none;
 }
 
 *,
@@ -11,8 +19,8 @@ body {
 
 .wrapper {
   max-width: 378px;
-  height: 718px;
   margin: 0 auto;
+  border: 1px solid gray;
 }
 
 header {
@@ -31,11 +39,6 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
-  list-style: none;
-}
-
-.union {
-  list-style: none;
 }
 
 h1 {
@@ -52,10 +55,10 @@ h1 {
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
-  color: #344563;
+  color: var(--blue-color);
 }
 
-.headline {
+.headline,.about {
   display: flex;
   flex-direction: column;
   padding-left: 5%;
@@ -71,17 +74,85 @@ h1 {
   color: #7f8cff;
   text-transform: uppercase;
   margin-bottom: 0;
-  list-style: none;
+  text-decoration: none;
 }
 
 .socials {
   display: flex;
   justify-content: space-between;
   max-width: 150px;
-  list-style: none;
   padding-inline-start: 0;
+  padding-bottom: 15px;
 }
 
-.icons > img:hover {
+.icons > a > img:hover {
   box-shadow: 2px 3px 5px 1px blue;
+}
+
+.works {
+  margin-top: 5%;
+  display: grid;
+  grid-template: repeat(4, 25%) / auto;
+  padding: 114px 24px;
+  gap: 50px;
+}
+
+.work-item {
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  background: white;
+  gap: 12px;
+  width: 327px;
+  padding: 16px;
+}
+
+.title {
+  margin-top: -10px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  font-style: normal;
+  color: #172b4d;
+}
+
+.frame-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 90%;
+}
+
+.client {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--blue-color);
+  text-transform: uppercase;
+}
+
+.details {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #71869a;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--blue-color);
+}
+
+.tags {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+  max-width: 70%;
 }
