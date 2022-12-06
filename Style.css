@@ -251,6 +251,10 @@ hr.solid {
   padding-bottom: 20px;
 }
 
+.content > h1 {
+  color: white;
+}
+
 .contact-text {
   padding: 0 10px;
 }
@@ -321,4 +325,3 @@ button:disabled {
   width: 100px;
   border-radius: 10px;
 }
-
