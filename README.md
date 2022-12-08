@@ -57,9 +57,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Mobile-Portfolio] <a name="about-project"></a>
+# 📖 [Portfolio] <a name="about-project"></a>
 
-> Portfolio Styled to fit all smartphone Screens(not tablets)
+> Portfolio Styled to fit all smartphone & Desktop Screens(not tablets)
 
 ## 🛠 Built With <a name="built-with"></a>
 
