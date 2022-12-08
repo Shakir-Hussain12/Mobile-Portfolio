@@ -2,6 +2,23 @@
   --blue-color: #344563;
 }
 
+/* images */
+.img1 {
+  content: url("./images/Snapshoot Portfolio.png");
+}
+
+.img2 {
+  content: url("./images/Snapshoot Portfolio-2.png");
+}
+
+.img3 {
+  content: url("./images/Snapshoot Portfolio-1.png");
+}
+
+.img4 {
+  content: url("./images/Snapshoot Portfolio-3.png");
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -18,7 +35,7 @@ li {
 }
 
 .wrapper {
-  max-width: 378px;
+  width: 378px;
   margin: 0 auto;
   border: 1px solid gray;
 }
@@ -39,6 +56,10 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
+}
+
+.page-flow {
+  display: none;
 }
 
 h1 {
@@ -94,7 +115,7 @@ h1 {
   margin-top: 5%;
   display: grid;
   grid-template: repeat(4, 25%) / auto;
-  padding: 114px 24px;
+  padding: 15% 5%;
   gap: 50px;
 }
 
@@ -122,8 +143,7 @@ h1 {
 .frame-2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  max-width: 90%;
+  gap: 10px;
   padding-inline-start: 0;
 }
 
@@ -155,8 +175,7 @@ h1 {
 .tags {
   display: flex;
   padding: 0;
-  justify-content: space-between;
-  max-width: 70%;
+  gap: 10px;
 }
 
 .normal-button,
@@ -203,7 +222,7 @@ h1 {
   font-size: 20px;
   line-height: 24px;
   display: flex;
-  max-width: 250px;
+  width: 250px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -314,6 +333,7 @@ button:disabled {
 }
 
 .eclipse {
+  content: url("./images/contact form shapes-mobile.svg");
   position: relative;
   top: 15px;
   left: 153px;
@@ -324,4 +344,309 @@ button:disabled {
   margin: 0 auto;
   width: 100px;
   border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .img1 {
+    content: url("./desktop-images/Snapshoot\ Portfolio.png");
+  }
+
+  .img2 {
+    content: url("./desktop-images/Snapshoot\ Portfolio-1.png");
+  }
+
+  .img3 {
+    content: url("./desktop-images/Snapshoot\ Portfolio-2.png");
+  }
+
+  .img4 {
+    content: url("./desktop-images/Snapshoot\ Portfolio-3.png");
+  }
+
+  .wrapper {
+    border: none;
+    width: 128%;
+    background-color: #f4f5f7;
+  }
+
+  header {
+    width: 100%;
+    position: fixed;
+    top: -3vh;
+    background: white;
+    z-index: 1;
+  }
+
+  .navbar {
+    margin-top: -3%;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+  .union {
+    display: none;
+  }
+
+  .page-flow {
+    display: flex;
+    min-width: 35%;
+    justify-content: space-between;
+  }
+
+  .page-flow > li > a {
+    text-decoration: none;
+  }
+
+  .page-flow > li > a:hover {
+    color: blue;
+  }
+
+  .headline {
+    margin-top: 5.5%;
+    background: url(./desktop-images/Header\ bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px 200px;
+    background-color: white;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+  }
+
+  .body-text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .works {
+    padding: 0 5%;
+  }
+
+  .work-item {
+    width: 100%;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .work-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .primary-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 52px;
+    color: #091e42;
+    margin-bottom: 0;
+  }
+
+  .title2,
+  .title3 {
+    visibility: hidden;
+    margin-bottom: -4vh;
+  }
+
+  .title2::after,
+  .title3::after {
+    content: "Facebook 360";
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: -2vh;
+    left: 0;
+  }
+
+  .title3::after {
+    content: "Uber Navigation";
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 60px;
+  }
+
+  .frame-2 {
+    gap: 12px;
+    align-items: center;
+  }
+
+  .frame-end {
+    margin-left: -6%;
+  }
+
+  .ruby {
+    content: url("./desktop-images/Tag.png");
+  }
+
+  .client,
+  .details {
+    font-size: 18px;
+    line-height: 24px;
+    color: #344563;
+  }
+
+  .details {
+    font-weight: 400;
+    color: #6b778c;
+  }
+
+  .client2,
+  .client4 {
+    visibility: hidden;
+  }
+
+  .client2::after,
+  .client4::after {
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: -2vh;
+    left: 0;
+    content: "FACEBOOK";
+  }
+
+  .client4::after {
+    content: "UBER";
+    padding-inline-start: 30%;
+  }
+
+  .role,
+  .end-role {
+    visibility: hidden;
+  }
+
+  .role::after,
+  .end-role::after {
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: -2vh;
+    left: 0;
+    content: "Full Stack Dev";
+  }
+
+  .end-role::after {
+    content: "Lead Developer";
+  }
+
+  .normal-button {
+    width: 130px;
+  }
+
+  .about {
+    background: url(./desktop-images/about\ myself\ -\ background-\ shape-\ desktop@2x.png);
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    gap: 80px;
+    padding: 0 5%;
+    margin-top: 15%;
+    padding-bottom: 10%;
+  }
+
+  .personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .personal-info > h1 {
+    font-size: 40px;
+    line-height: 52px;
+    color: #091e42;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-list > ul {
+    padding-inline-start: 2%;
+    width: 397px;
+  }
+
+  .list-item {
+    width: 100%;
+  }
+
+  .desk-languages {
+    display: flex;
+    gap: 5%;
+    padding-inline-start: 0;
+    width: 35%;
+  }
+
+  .sub-language {
+    height: 15vh;
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .eclipse {
+    display: none;
+  }
+
+  .content {
+    background: url("./desktop-images/contact\ form-background.png");
+    margin-top: 0;
+    text-align: center;
+    padding: 70px 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .content > h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .contact-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #ebebff;
+  }
+
+  .round {
+    margin-top: 16%;
+  }
+
+  hr.solid {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .frame-end {
+    margin-left: -4%;
+  }
+
+  header {
+    top: -5vh;
+  }
+
+  .navbar {
+    margin-top: -1%;
+  }
 }
