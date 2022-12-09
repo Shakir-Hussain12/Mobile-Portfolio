@@ -57,6 +57,21 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
+  animation: rotate 5s 1 linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img:hover {
+  transform: scale(1.2);
 }
 
 .page-flow {
@@ -195,6 +210,7 @@ h1 {
   letter-spacing: 0.03em;
   color: #396df2;
   text-align: center;
+  transition: background 2s;
 }
 
 .resume-button {
