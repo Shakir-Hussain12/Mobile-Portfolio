@@ -121,7 +121,7 @@ h1 {
 }
 
 .work-item {
-  margin: 5% 0;
+  margin: 5% auto;
   display: flex;
   flex-direction: column;
   border: 1px solid #dfe1e6;
@@ -407,7 +407,7 @@ button:disabled {
   .headline {
     margin-top: 5.5%;
     background: url(./desktop-images/Header\ bg.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     padding: 100px 80px;
     background-color: white;
@@ -659,6 +659,12 @@ button:disabled {
 
   hr.solid {
     width: 95%;
+  }
+}
+
+@media (min-width: 950px) {
+  .work-item {
+    width: 86%;
   }
 }
 
