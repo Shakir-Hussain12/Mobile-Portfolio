@@ -2,9 +2,27 @@
   --blue-color: #344563;
 }
 
+/* images */
+.img1 {
+  content: url("./images/Snapshoot Portfolio.png");
+}
+
+.img2 {
+  content: url("./images/Snapshoot Portfolio-2.png");
+}
+
+.img3 {
+  content: url("./images/Snapshoot Portfolio-1.png");
+}
+
+.img4 {
+  content: url("./images/Snapshoot Portfolio-3.png");
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 li {
@@ -18,7 +36,7 @@ li {
 }
 
 .wrapper {
-  max-width: 378px;
+  width: 378px;
   margin: 0 auto;
   border: 1px solid gray;
 }
@@ -39,6 +57,10 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
+}
+
+.page-flow {
+  display: none;
 }
 
 h1 {
@@ -94,12 +116,12 @@ h1 {
   margin-top: 5%;
   display: grid;
   grid-template: repeat(4, 25%) / auto;
-  padding: 114px 24px;
+  padding: 15% 5%;
   gap: 50px;
 }
 
 .work-item {
-  margin: 5% 0;
+  margin: 5% auto;
   display: flex;
   flex-direction: column;
   border: 1px solid #dfe1e6;
@@ -122,8 +144,7 @@ h1 {
 .frame-2 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  max-width: 90%;
+  gap: 10px;
   padding-inline-start: 0;
 }
 
@@ -155,8 +176,7 @@ h1 {
 .tags {
   display: flex;
   padding: 0;
-  justify-content: space-between;
-  max-width: 70%;
+  gap: 10px;
 }
 
 .normal-button,
@@ -203,7 +223,7 @@ h1 {
   font-size: 20px;
   line-height: 24px;
   display: flex;
-  max-width: 250px;
+  width: 97%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -314,6 +334,7 @@ button:disabled {
 }
 
 .eclipse {
+  content: url("./images/contact form shapes-mobile.svg");
   position: relative;
   top: 15px;
   left: 153px;
@@ -324,4 +345,354 @@ button:disabled {
   margin: 0 auto;
   width: 100px;
   border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .img1 {
+    content: url("./desktop-images/Snapshoot\ Portfolio.png");
+  }
+
+  .img2 {
+    content: url("./desktop-images/Snapshoot\ Portfolio-1.png");
+  }
+
+  .img3 {
+    content: url("./desktop-images/Snapshoot\ Portfolio-2.png");
+  }
+
+  .img4 {
+    content: url("./desktop-images/Snapshoot\ Portfolio-3.png");
+  }
+
+  .wrapper {
+    border: none;
+    width: 100%;
+    background-color: #f4f5f7;
+  }
+
+  header {
+    width: 100%;
+    position: fixed;
+    top: -3vh;
+    background: white;
+    z-index: 1;
+  }
+
+  .navbar {
+    margin-top: -2%;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+  .union {
+    display: none;
+  }
+
+  .page-flow {
+    display: flex;
+    min-width: 35%;
+    justify-content: space-between;
+  }
+
+  .page-flow > li > a {
+    text-decoration: none;
+  }
+
+  .page-flow > li > a:hover {
+    color: blue;
+  }
+
+  .headline {
+    margin-top: 5.5%;
+    background: url(./desktop-images/Header\ bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 100px 80px;
+    background-color: white;
+    height: 100vh;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+    margin-bottom: 2px;
+  }
+
+  .list-item > span > img {
+    position: relative;
+    top: 8px;
+  }
+
+  .works {
+    padding: 0 1%;
+    grid-template: repeat(4, auto) / minmax(0, 1fr);
+  }
+
+  .work-item {
+    width: 100%;
+    flex-direction: row;
+    padding: 15px;
+    padding-bottom: 20px;
+  }
+
+  .thumbnail {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .thumbnail > a > img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .work-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .primary-text {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 18px;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #091e42;
+    margin-bottom: 0;
+  }
+
+  .title2,
+  .title3 {
+    visibility: hidden;
+    margin-bottom: -4vh;
+  }
+
+  .title2::after,
+  .title3::after {
+    content: "Facebook 360";
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: -2vh;
+    left: 0;
+  }
+
+  .title3::after {
+    content: "Uber Navigation";
+  }
+
+  .description {
+    font-size: 1em;
+    line-height: 1rem;
+    padding-right: 60px;
+  }
+
+  .frame-2 {
+    gap: 2%;
+    align-items: center;
+  }
+
+  .frame-end {
+    margin-left: -6%;
+  }
+
+  .ruby {
+    content: url("./desktop-images/Tag.png");
+  }
+
+  .client,
+  .details {
+    font-size: 1em;
+    line-height: 1em;
+    color: #344563;
+  }
+
+  .details {
+    font-weight: 400;
+    color: #6b778c;
+  }
+
+  .client2,
+  .client4 {
+    visibility: hidden;
+  }
+
+  .client2::after,
+  .client4::after {
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: -1.5vh;
+    left: 0;
+    content: "FACEBOOK";
+  }
+
+  .client4::after {
+    content: "UBER";
+    padding-inline-start: 30%;
+  }
+
+  .role,
+  .end-role {
+    visibility: hidden;
+  }
+
+  .role::after,
+  .end-role::after {
+    visibility: visible;
+    display: block;
+    position: relative;
+    top: -1.5vh;
+    left: 0;
+    content: "Full Stack Dev";
+  }
+
+  .end-role::after {
+    content: "Lead Developer";
+  }
+
+  .tags {
+    gap: 2%;
+  }
+
+  .normal-button {
+    width: 130px;
+    height: 48px;
+  }
+
+  .about {
+    background: url(./desktop-images/about\ myself\ -\ background-\ shape-\ desktop@2x.png);
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding: 8% 2%;
+    margin-top: 15%;
+    padding-inline-start: 3%;
+  }
+
+  .personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .personal-info > h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #091e42;
+    margin-bottom: 3px;
+  }
+
+  .personal-info > .body-text {
+    line-height: 22px;
+  }
+
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+    padding: 7% 0;
+    padding-inline-start: 2%;
+    max-width: 58%;
+  }
+
+  .skill-list > ul {
+    max-width: 100%;
+  }
+
+  .list-item {
+    width: 100%;
+  }
+
+  .desk-languages {
+    display: flex;
+    padding-inline-start: 0;
+    width: 50%;
+  }
+
+  .sub-language {
+    height: 14vh;
+    gap: 0;
+    flex-direction: column;
+    margin: 0 2%;
+    align-items: baseline;
+    padding: 1px 3%;
+  }
+
+  .eclipse {
+    display: none;
+  }
+
+  .content {
+    background: url("./desktop-images/contact\ form-background.png");
+    margin-top: 0;
+    text-align: center;
+    padding: 5% 26%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .content > h1 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .contact-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 0 10%;
+    color: #ebebff;
+  }
+
+  .round {
+    margin-top: 16%;
+  }
+
+  hr.solid {
+    width: 95%;
+  }
+}
+
+@media (min-width: 950px) {
+  .work-item {
+    width: 86%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .frame-end {
+    margin-left: -4%;
+  }
+
+  header {
+    top: -5vh;
+  }
+
+  .navbar {
+    margin-top: -1%;
+  }
+
+  .thumbnail {
+    width: auto;
+  }
+
+  .list-item > span > img {
+    position: relative;
+    top: 4px;
+    right: 27%;
+  }
+
+  .about {
+    padding: 0 5%;
+    padding-bottom: 5%;
+  }
 }
