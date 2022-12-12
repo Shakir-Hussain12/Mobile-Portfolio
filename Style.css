@@ -57,7 +57,17 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
-  animation: rotate 5s 1 linear;
+  animation: rotate 5s 1 linear 2s, resize 5s 1 linear;
+}
+
+@keyframes resize {
+  from {
+    transform: scale(1.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes rotate {
@@ -125,6 +135,8 @@ h1 {
 
 .icons > a > img:hover {
   box-shadow: 2px 3px 5px 1px blue;
+  transform: scale(1.5);
+  transition: transform 1s;
 }
 
 .works {
@@ -396,6 +408,17 @@ button:disabled {
 
   .navbar {
     margin-top: -2%;
+    animation: shownav 5s linear;
+  }
+
+  @keyframes shownav {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 10vh;
+    }
   }
 
   .logo {
@@ -410,10 +433,24 @@ button:disabled {
     display: flex;
     min-width: 35%;
     justify-content: space-between;
+    animation: slidepage 10s linear;
   }
 
   .page-flow > li > a {
     text-decoration: none;
+  }
+
+  @keyframes slidepage {
+    from {
+      visibility: hidden;
+      position: relative;
+      right: -100px;
+    }
+
+    to {
+      visibility: visible;
+      right: 100px;
+    }
   }
 
   .page-flow > li > a:hover {
