@@ -1,3 +1,49 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";
+
+/* animations */
+@keyframes resize {
+  from {
+    transform: scale(1.3);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shownav {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 10vh;
+  }
+}
+
+@keyframes slidepage {
+  from {
+    visibility: hidden;
+    position: relative;
+    right: -100px;
+  }
+
+  to {
+    visibility: visible;
+    right: 100px;
+  }
+}
+
 :root {
   --blue-color: #344563;
 }
@@ -57,27 +103,7 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
-  animation: rotate 5s 1 linear 2s, resize 5s 1 linear;
-}
-
-@keyframes resize {
-  from {
-    transform: scale(1.5);
-  }
-
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  animation: rotate 3s 1 linear 1s;
 }
 
 img:hover {
@@ -131,12 +157,6 @@ h1 {
   max-width: 150px;
   padding-inline-start: 0;
   padding-bottom: 15px;
-}
-
-.icons > a > img:hover {
-  box-shadow: 2px 3px 5px 1px blue;
-  transform: scale(1.5);
-  transition: transform 1s;
 }
 
 .works {
@@ -204,6 +224,10 @@ h1 {
   display: flex;
   padding: 0;
   gap: 10px;
+}
+
+.RoR {
+  display: none;
 }
 
 .normal-button,
@@ -328,7 +352,7 @@ input {
 
 textarea {
   border-radius: 10px;
-  color: gray;
+  color: black;
   padding: 10px;
   border: 1px solid#CFD8DC;
 }
@@ -341,24 +365,8 @@ button {
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
-  color: #6070ff;
+  color: black;
   border: 1px solid#CFD8DC;
-}
-
-.normal-button:hover,
-.resume-button:hover,
-button:hover {
-  background: #6070ff;
-  color: white;
-}
-
-button:disabled {
-  border: 1px solid #c1c7d0;
-  color: #5e6c84;
-}
-
-.connect:hover {
-  color: green;
 }
 
 .eclipse {
@@ -375,7 +383,39 @@ button:disabled {
   border-radius: 10px;
 }
 
+/* effects */
+.normal-button:hover,
+.resume-button:hover {
+  background: #6070ff;
+  color: white;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+button:disabled {
+  border: 1px solid #c1c7d0;
+  color: #5e6c84;
+}
+
+.connect:hover {
+  color: green;
+}
+
+.page-flow > li > a:hover {
+  color: blue;
+}
+
+.icons > a > img:hover {
+  box-shadow: 2px 3px 5px 1px blue;
+  transform: scale(1.2);
+  transition: transform 1s;
+}
+
 @media (min-width: 768px) {
+  /* images */
   .img1 {
     content: url("./desktop-images/Snapshoot\ Portfolio.png");
   }
@@ -411,18 +451,9 @@ button:disabled {
     animation: shownav 5s linear;
   }
 
-  @keyframes shownav {
-    from {
-      height: 0;
-    }
-
-    to {
-      height: 10vh;
-    }
-  }
-
   .logo {
     align-self: center;
+    animation: rotate 5s 1 linear 2s, resize 5s 1 linear;
   }
 
   .union {
@@ -438,23 +469,6 @@ button:disabled {
 
   .page-flow > li > a {
     text-decoration: none;
-  }
-
-  @keyframes slidepage {
-    from {
-      visibility: hidden;
-      position: relative;
-      right: -100px;
-    }
-
-    to {
-      visibility: visible;
-      right: 100px;
-    }
-  }
-
-  .page-flow > li > a:hover {
-    color: blue;
   }
 
   .headline {
@@ -556,8 +570,8 @@ button:disabled {
     margin-left: -6%;
   }
 
-  .ruby {
-    content: url("./desktop-images/Tag.png");
+  .RoR {
+    display: inline-block;
   }
 
   .client,
