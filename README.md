@@ -40,6 +40,7 @@ After you're finished please remove all the comments and instructions!
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [Loom Walkthrough](#loom)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -108,6 +109,8 @@ After you're finished please remove all the comments and instructions!
 
 - [Live Demo Link](https://shakir-hussain12.github.io/Mobile-Portfolio/)
 
+## Loom Video <a name="loom"></a>
+- [Video Link](https://www.loom.com/share/ffec14632ae74fd98b5b1fe26e8fbd1a)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
