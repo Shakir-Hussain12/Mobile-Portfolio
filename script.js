@@ -1,9 +1,9 @@
 const nav = document.querySelector('.page-flow');
 const ham = document.querySelector('.hamburger');
 const body = document.querySelector('body');
-let li = document.querySelectorAll('.page-flow > li');
-let x = window.matchMedia('(max-width: 768px)');
-let sec = document.querySelectorAll('*');
+const li = document.querySelectorAll('.page-flow > li');
+const x = window.matchMedia('(max-width: 768px)');
+const sec = document.querySelectorAll('*');
 let id;
 
 function myFunction(x) {
