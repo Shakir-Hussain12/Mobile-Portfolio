@@ -139,7 +139,7 @@ header {
   display: flex;
   position: absolute;
   margin: -6% auto;
-  left: 0px;
+  left: 0;
   height: 101vh;
   padding-top: 40%;
   background-color: rgba(0, 0, 255, 0.9);
@@ -328,6 +328,10 @@ h1 {
   align-items: center;
 }
 
+img:hover {
+  transform: scale(1.2);
+}
+
 .list-item > span > img:hover {
   box-shadow: 2px 3px 5px 1px blue;
 }
@@ -431,10 +435,6 @@ button {
 }
 
 /* effects */
-img:hover {
-  transform: scale(1.2);
-}
-
 .normal-button:hover,
 .resume-button:hover {
   background: #6070ff;
