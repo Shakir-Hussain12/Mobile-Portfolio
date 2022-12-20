@@ -2,28 +2,28 @@ const nav = document.querySelector('.page-flow');
 const ham = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const li = document.querySelectorAll('.page-flow > li');
-const x = window.matchMedia('(max-width: 768px)');
 const sec = document.querySelectorAll('*');
 let id;
-let screen_width = window.innerWidth;
+let screenWidth = window.innerWidth;
+
+
+function remAttributes() {
+  nav.classList.remove('active');
+  ham.classList.remove('active');
+  body.classList.remove('b_active');
+}
 
 // Change values when window is resized
 window.onresize = function() {
-  screen_width = window.innerWidth;
-  if(screen_width>=768){
+  screenWidth = window.innerWidth;
+  if (screenWidth >= 768) {
     remAttributes();
   }
-};
-
-function remAttributes(){
-  nav.classList.remove('active');
-  ham.classList.remove('active');
-  body.classList.remove('b_active'); 
 }
 
-function addAttributes(){
+function addAttributes() {
   ham.addEventListener('click', () => {
-    if (screen_width<768){
+    if (screenWidth < 768) {
       nav.classList.toggle('active');
       ham.classList.toggle('active');
       body.classList.toggle('b_active');
@@ -33,7 +33,7 @@ function addAttributes(){
         });
       });
     } else {
-       remAttributes();
+      remAttributes();
     }
   });
 }
