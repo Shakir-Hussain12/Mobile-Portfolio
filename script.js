@@ -6,14 +6,14 @@ const sec = document.querySelectorAll('*');
 let id;
 let screenWidth = window.innerWidth;
 
-function remAttributes () {
+function remAttributes() {
   nav.classList.remove('active');
   ham.classList.remove('active');
   body.classList.remove('b_active');
 }
 
 // Change values when window is resized
-window.onresize = function() {
+window.onresize = function () {
   screenWidth = window.innerWidth;
   if (screenWidth >= 768) {
     remAttributes();
