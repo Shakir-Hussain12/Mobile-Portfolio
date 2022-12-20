@@ -140,9 +140,9 @@ header {
   position: absolute;
   margin: -6% auto;
   left: 0;
-  height: 101vh;
+  height: 1000vh;
   padding-top: 40%;
-  background-color: rgba(0, 0, 255, 0.9);
+  background-color: rgba(96, 112, 255, 0.9);
   flex-direction: column;
   align-items: baseline;
   gap: 10px;
@@ -425,6 +425,10 @@ button {
   position: relative;
   top: 15px;
   left: 153px;
+}
+
+.eclipse:hover {
+  transform: scale(1);
 }
 
 .round {

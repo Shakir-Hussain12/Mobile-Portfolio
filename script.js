@@ -5,31 +5,40 @@ const li = document.querySelectorAll('.page-flow > li');
 const x = window.matchMedia('(max-width: 768px)');
 const sec = document.querySelectorAll('*');
 let id;
+let screen_width = window.innerWidth;
 
-function myFunction(x) {
-  // If media query matches
-  if (x.matches) {
-    x.addListener(myFunction);
-    ham.addEventListener('click', () => {
+// Change values when window is resized
+window.onresize = function() {
+  screen_width = window.innerWidth;
+  if(screen_width>=768){
+    remAttributes();
+  }
+};
+
+function remAttributes(){
+  nav.classList.remove('active');
+  ham.classList.remove('active');
+  body.classList.remove('b_active'); 
+}
+
+function addAttributes(){
+  ham.addEventListener('click', () => {
+    if (screen_width<768){
       nav.classList.toggle('active');
       ham.classList.toggle('active');
       body.classList.toggle('b_active');
-    });
-    li.forEach((n) => {
-      n.addEventListener('click', () => {
-        nav.classList.remove('active');
-        ham.classList.remove('active');
-        body.classList.remove('b_active');
+      li.forEach((n) => {
+        n.addEventListener('click', () => {
+          remAttributes();
+        });
       });
-    });
-  } else {
-    nav.classList.remove('active');
-    ham.classList.remove('active');
-    body.classList.remove('b_active');
-  }
+    } else {
+       remAttributes();
+    }
+  });
 }
 
-myFunction(x);
+addAttributes();
 
 sec.forEach((section) => {
   section.addEventListener('mouseenter', () => {
