@@ -71,6 +71,14 @@ body {
   overflow-x: hidden;
 }
 
+.b_active {
+  overflow-y: hidden;
+}
+
+.active-page {
+  border-bottom: 1px solid gray;
+}
+
 li {
   list-style: none;
 }
@@ -90,8 +98,10 @@ li {
 header {
   width: 375px;
   height: 48px;
-  top: 44px;
   padding: 3%;
+  position: fixed;
+  background: white;
+  z-index: 1;
 }
 
 .navbar {
@@ -106,12 +116,48 @@ header {
   animation: rotate 3s 1 linear 1s;
 }
 
-img:hover {
-  transform: scale(1.2);
+.union {
+  cursor: pointer;
+}
+
+.hamburger {
+  content: url("./images/Union.png");
+}
+
+.hamburger.active {
+  content: url("./images/Enabled-close.png");
+  position: relative;
+  z-index: 1;
 }
 
 .page-flow {
   display: none;
+}
+
+.page-flow.active {
+  width: 378px;
+  display: flex;
+  position: absolute;
+  margin: -6% auto;
+  left: 0;
+  height: 1000vh;
+  padding-top: 40%;
+  background-color: rgba(96, 112, 255, 0.9);
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.page-flow.active * {
+  text-decoration: none;
+  color: white;
+}
+
+.page-flow.active *:hover {
+  color: black;
 }
 
 h1 {
@@ -138,6 +184,7 @@ h1 {
   padding-left: 5%;
   background-image: url(./images/header-shapes\ mobile.png);
   background-repeat: no-repeat;
+  margin-top: 5%;
 }
 
 .connect {
@@ -281,6 +328,10 @@ h1 {
   align-items: center;
 }
 
+img:hover {
+  transform: scale(1.2);
+}
+
 .list-item > span > img:hover {
   box-shadow: 2px 3px 5px 1px blue;
 }
@@ -376,6 +427,10 @@ button {
   left: 153px;
 }
 
+.eclipse:hover {
+  transform: scale(1);
+}
+
 .round {
   border-top: 2px solid #0d141e;
   margin: 0 auto;
@@ -467,12 +522,11 @@ button:disabled {
     animation: slidepage 10s linear;
   }
 
-  .page-flow > li > a {
+  .page-flow * {
     text-decoration: none;
   }
 
   .headline {
-    margin-top: 5.5%;
     background: url(./desktop-images/Header\ bg.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -705,6 +759,7 @@ button:disabled {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-top-left-radius: 20%;
   }
 
   .content > h1 {
