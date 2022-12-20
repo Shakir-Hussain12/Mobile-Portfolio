@@ -6,8 +6,7 @@ const sec = document.querySelectorAll('*');
 let id;
 let screenWidth = window.innerWidth;
 
-
-function remAttributes() {
+function remAttributes () {
   nav.classList.remove('active');
   ham.classList.remove('active');
   body.classList.remove('b_active');
@@ -19,7 +18,7 @@ window.onresize = function() {
   if (screenWidth >= 768) {
     remAttributes();
   }
-}
+};
 
 function addAttributes() {
   ham.addEventListener('click', () => {
