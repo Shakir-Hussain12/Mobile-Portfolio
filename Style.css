@@ -181,7 +181,7 @@ h1 {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 95%;
   margin: 40px auto;
   background-color: white;
   border: 1px solid #ebecf0;
@@ -194,8 +194,9 @@ h1 {
   width: 10%;
   position: absolute;
   right: 4%;
-  top: 1%;
+  top: 2%;
   background-color: black;
+  cursor: pointer;
 }
 
 .showtitle {

@@ -3,6 +3,10 @@ const ham = document.querySelector('.hamburger');
 const body = document.querySelector('body');
 const li = document.querySelectorAll('.page-flow > li');
 const sec = document.querySelectorAll('*');
+const show = document.querySelector('#showDetails')
+const btnExpand = document.querySelectorAll('.normal-button');
+const btnCollapse = document.querySelector('.closeBtn')
+
 let id;
 let screenWidth = window.innerWidth;
 
@@ -57,3 +61,13 @@ sec.forEach((section) => {
     }
   });
 });
+
+btnExpand.forEach((button) => {
+  button.addEventListener('click', () => {
+    show.classList.add('active');
+  });
+});
+
+btnCollapse.addEventListener('click', () => {
+  show.classList.remove('active');
+})
