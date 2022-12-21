@@ -39,10 +39,10 @@ const showData = {
     './desktop-images/Tag.png',
   ],
   src: [
-    './desktop-images/Snapshoot\ Portfolio.png',
-    './desktop-images/Snapshoot\ Portfolio-1.png',
-    './desktop-images/Snapshoot\ Portfolio-2.png',
-    './desktop-images/Snapshoot\ Portfolio-3.png',
+    './desktop-images/SnapshootPortfolio.png',
+    './desktop-images/SnapshootPortfolio-1.png',
+    './desktop-images/SnapshootPortfolio-2.png',
+    './desktop-images/SnapshootPortfolio-3.png',
   ],
   buttons: [
     [
@@ -123,17 +123,17 @@ btnExpand.forEach((button) => {
       const p = show.querySelector('.showtext p');
       const tech = show.querySelectorAll('.showtech');
       const btn = show.querySelectorAll('.showbuttons');
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 4; i+=1) {
         if (showData.title[i].includes(check)) {
           title.textContent = showData.title[i];
           thumb.children[0].src = showData.src[i];
           inp.textContent = showData.detail[0][i];
           inpDetail.textContent = showData.detail[1][i];
           p.textContent = showData.info;
-          for (const j in showData.tech) {
+          for (let j=0;j<showData.tech.length;j+=1) {
             tech[0].children[j].children[0].src = showData.tech[j];
           }
-          for (const j in showData.buttons) {
+          for (let j=0;j<showData.buttons.length;j+=1) {
             btn[0].children[1].children[j].children[0].href = showData.buttons[0][j];
             btn[0].children[1].children[j].children[0].children[0].src = showData.buttons[1][j];
           }

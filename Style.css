@@ -151,6 +151,10 @@ header {
   line-height: 44px;
 }
 
+.showdetails > * {
+  list-style: disc;
+}
+
 .page-flow.active * {
   text-decoration: none;
   color: white;
@@ -232,10 +236,6 @@ h1 {
   color: #7a869a;
 }
 
-.showdetails > * {
-  list-style: disc;
-}
-
 .showdescription {
   display: flex;
   flex-direction: column;
@@ -258,16 +258,16 @@ h1 {
   gap: 3%;
 }
 
+.skill-list > ul {
+  padding-inline-start: 2%;
+}
+
 .showbuttons > ul:nth-child(2) {
   display: flex;
   flex-wrap: nowrap;
   padding-inline-start: 0;
   margin-top: 3%;
   gap: 2%;
-}
-
-.showbuttons > ul:nth-child(2) > li > img {
-  width: 95%;
 }
 
 .body-text {
@@ -414,10 +414,6 @@ h1 {
   padding: 10% 0;
 }
 
-.skill-list > ul {
-  padding-inline-start: 2%;
-}
-
 .list-item {
   font-weight: 500;
   font-size: 20px;
@@ -429,7 +425,7 @@ h1 {
   align-items: center;
 }
 
-img:hover :not(showthumbnail) {
+img:hover :not(.showthumbnail) {
   transform: scale(1.2);
 }
 
@@ -570,22 +566,26 @@ button:disabled {
   transition: transform 1s;
 }
 
+.showbuttons > ul:nth-child(2) > li > img {
+  width: 95%;
+}
+
 @media (min-width: 768px) {
   /* images */
   .img1 {
-    content: url("./desktop-images/Snapshoot\ Portfolio.png");
+    content: url("./desktop-images/SnapshootPortfolio.png");
   }
 
   .img2 {
-    content: url("./desktop-images/Snapshoot\ Portfolio-1.png");
+    content: url("./desktop-images/SnapshootPortfolio-1.png");
   }
 
   .img3 {
-    content: url("./desktop-images/Snapshoot\ Portfolio-2.png");
+    content: url("./desktop-images/SnapshootPortfolio-2.png");
   }
 
   .img4 {
-    content: url("./desktop-images/Snapshoot\ Portfolio-3.png");
+    content: url("./desktop-images/SnapshootPortfolio-3.png");
   }
 
   .wrapper {
@@ -629,9 +629,9 @@ button:disabled {
 
   /* pop-up menu */
   .showtitle {
-      font-size: 40px;
-      line-height: 52px;
-      color: #091e42;
+    font-size: 40px;
+    line-height: 52px;
+    color: #091e42;
   }
 
   .closeBtn {
@@ -639,13 +639,13 @@ button:disabled {
   }
 
   .showoutside {
-      font-size: 15px;
-      line-height: 20px;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   .showdetails {
-      min-width: 30%;
-      padding-inline-start: 0;
+    min-width: 30%;
+    padding-inline-start: 0;
   }
 
   .showtext {
@@ -659,7 +659,7 @@ button:disabled {
     flex-direction: row;
     padding: 2%;
   }
-  
+
   .showbuttons {
     margin-top: 3%;
   }
