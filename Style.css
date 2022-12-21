@@ -930,6 +930,10 @@ button:disabled {
   .showtext {
     max-width: 55%;
   }
+
+  .showdetails {
+    min-width: 25%;
+  }
 }
 
 @media (min-width: 1000px) {
