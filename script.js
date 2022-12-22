@@ -6,134 +6,129 @@ const btnCollapse = document.querySelector('.closeBtn');
 const head = document.querySelector('header');
 let screenWidth = window.innerWidth;
 
-const items = [];
-let instance = {
-  title: 'Tonic',
-  details: [
-    'CANOPY',
-    'Back End Dev',
-    '2015',
-  ],
-  info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  tech: [
-    './images/Tag.png',
-    './images/Tag (1).png',
-    './images/Tag(2).png',
-  ],
-  src: 'img1',
-  url: [
-    './images/SnapshootPortfolio.png',
-    './desktop-images/SnapshootPortfolio.png',
-  ],
-  buttons: [
-    [
-      'https://shakir-hussain12.github.io/Mobile-Portfolio/',
-      'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
-    ],
-    [
-      './desktop-images/Live_btn.png',
-      './desktop-images/Source_Btn.png',
-    ],
-  ],
-};
-items.push(instance);
 
-instance = {
-  title: 'Multi Post Stories',
-  details: [
-    'Facebook',
-    'Full Stack Dev',
-    '2015',
-  ],
-  info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  tech: [
-    './images/Tag.png',
-    './images/Tag (1).png',
-    './images/Tag(2).png',
-    './desktop-images/Tag.png',
-  ],
-  src: 'img2',
-  url: [
-    './images/SnapshootPortfolio-2.png',
-    './desktop-images/SnapshootPortfolio-1.png',
-  ],
-  buttons: [
-    [
-      'https://shakir-hussain12.github.io/Mobile-Portfolio/',
-      'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+const items = [
+  {
+    title: 'Tonic',
+    details: [
+      'CANOPY',
+      'Back End Dev',
+      '2015',
     ],
-    [
-      './desktop-images/Live_btn.png',
-      './desktop-images/Source_Btn.png',
+    info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: [
+      './images/Tag.png',
+      './images/Tag (1).png',
+      './images/Tag(2).png',
     ],
-  ],
-};
-items.push(instance);
-
-instance = {
-  title: 'Facebook 360',
-  details:
-    [
+    src: 'img1',
+    url: [
+      './images/SnapshootPortfolio.png',
+      './desktop-images/SnapshootPortfolio.png',
+    ],
+    buttons: [
+      [
+        'https://shakir-hussain12.github.io/Mobile-Portfolio/',
+        'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+      ],
+      [
+        './desktop-images/Live_btn.png',
+        './desktop-images/Source_Btn.png',
+      ],
+    ]
+  },
+  {
+    title: 'Multi Post Stories',
+    details: [
       'Facebook',
       'Full Stack Dev',
       '2015',
     ],
-  info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  tech: [
-    './images/Tag.png',
-    './images/Tag (1).png',
-    './images/Tag(2).png',
-    './desktop-images/Tag.png',
-  ],
-  src: 'img3',
-  url: [
-    './images/SnapshootPortfolio-1.png',
-    './desktop-images/SnapshootPortfolio-2.png',
-  ],
-  buttons: [
-    [
-      'https://shakir-hussain12.github.io/Mobile-Portfolio/',
-      'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+    info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: [
+      './images/Tag.png',
+      './images/Tag (1).png',
+      './images/Tag(2).png',
+      './desktop-images/Tag.png',
     ],
-    [
-      './desktop-images/Live_btn.png',
-      './desktop-images/Source_Btn.png',
+    src: 'img2',
+    url: [
+      './images/SnapshootPortfolio-2.png',
+      './desktop-images/SnapshootPortfolio-1.png',
     ],
-  ],
-};
-items.push(instance);
-
-instance = {
-  title: 'Uber Navigation',
-  details: [
-    'UBER',
-    'Lead Developer',
-    '2015',
-  ],
-  info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-  tech: [
-    './images/Tag.png',
-    './images/Tag (1).png',
-    './images/Tag(2).png',
-    './desktop-images/Tag.png',
-  ],
-  src: 'img4',
-  url: [
-    './images/SnapshootPortfolio-3.png',
-    './desktop-images/SnapshootPortfolio-3.png',
-  ],
-  buttons: [
-    [
-      'https://shakir-hussain12.github.io/Mobile-Portfolio/',
-      'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+    buttons: [
+      [
+        'https://shakir-hussain12.github.io/Mobile-Portfolio/',
+        'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+      ],
+      [
+        './desktop-images/Live_btn.png',
+        './desktop-images/Source_Btn.png',
+      ],
+    ]
+  },
+  {
+    title: 'Facebook 360',
+    details:
+      [
+        'Facebook',
+        'Full Stack Dev',
+        '2015',
+      ],
+    info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: [
+      './images/Tag.png',
+      './images/Tag (1).png',
+      './images/Tag(2).png',
+      './desktop-images/Tag.png',
     ],
-    [
-      './desktop-images/Live_btn.png',
-      './desktop-images/Source_Btn.png',
+    src: 'img3',
+    url: [
+      './images/SnapshootPortfolio-1.png',
+      './desktop-images/SnapshootPortfolio-2.png',
     ],
-  ],
-};
-items.push(instance);
+    buttons: [
+      [
+        'https://shakir-hussain12.github.io/Mobile-Portfolio/',
+        'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+      ],
+      [
+        './desktop-images/Live_btn.png',
+        './desktop-images/Source_Btn.png',
+      ],
+    ],
+  },
+  {
+    title: 'Uber Navigation',
+    details: [
+      'UBER',
+      'Lead Developer',
+      '2015',
+    ],
+    info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    tech: [
+      './images/Tag.png',
+      './images/Tag (1).png',
+      './images/Tag(2).png',
+      './desktop-images/Tag.png',
+    ],
+    src: 'img4',
+    url: [
+      './images/SnapshootPortfolio-3.png',
+      './desktop-images/SnapshootPortfolio-3.png',
+    ],
+    buttons: [
+      [
+        'https://shakir-hussain12.github.io/Mobile-Portfolio/',
+        'https://github.com/Shakir-Hussain12/Mobile-Portfolio',
+      ],
+      [
+        './desktop-images/Live_btn.png',
+        './desktop-images/Source_Btn.png',
+      ],
+    ],
+  }
+]
 
 // Hamburger
 
