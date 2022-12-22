@@ -10,11 +10,9 @@ const items = [];
 let instance = {
   title: 'Tonic',
   details: [
-    [
-      'CANOPY',
-      'Back End Dev',
-      '2015',
-    ],
+    'CANOPY',
+    'Back End Dev',
+    '2015',
   ],
   info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   tech: [
@@ -43,11 +41,9 @@ items.push(instance);
 instance = {
   title: 'Multi Post Stories',
   details: [
-    [
-      'Facebook',
-      'Full Stack Dev',
-      '2015',
-    ],
+    'Facebook',
+    'Full Stack Dev',
+    '2015',
   ],
   info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   tech: [
@@ -76,13 +72,12 @@ items.push(instance);
 
 instance = {
   title: 'Facebook 360',
-  details: [
+  details:
     [
       'Facebook',
       'Full Stack Dev',
       '2015',
     ],
-  ],
   info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   tech: [
     './images/Tag.png',
@@ -111,11 +106,9 @@ items.push(instance);
 instance = {
   title: 'Uber Navigation',
   details: [
-    [
-      'UBER',
-      'Lead Developer',
-      '2015',
-    ],
+    'UBER',
+    'Lead Developer',
+    '2015',
   ],
   info: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
   tech: [
@@ -217,14 +210,14 @@ items.forEach((item) => {
     'frame-2'));
   let li = createElem('li',
     'client');
-  li.textContent = item.details[0][0];
+  li.textContent = item.details[0];
   ul.appendChild(li);
   const ul1 = createElem('ul',
     'inside');
   for (let ind = 1; ind < 3; ind += 1) {
     li = createElem('li',
       'details');
-    li.textContent = item.details[0][ind];
+    li.textContent = item.details[ind];
     ul1.appendChild(li);
   }
   ul.appendChild(ul1);
@@ -261,14 +254,13 @@ btnExpand.forEach((button) => {
       const p = show.querySelector('.showtext p');
       const tech = show.querySelectorAll('.showtech');
       const btn = show.querySelectorAll('.showbuttons');
-      let checker;
       for (let ind = 0; ind < items.length; ind += 1) {
         if (items[ind].title.includes(check)) {
           title.textContent = items[ind].title;
           thumb.children[0].src = items[ind].url[1];
-          inp.textContent = items[ind].details[0][0];
-          for (j = 0; j < items[ind].details[0].length - 1; j += 1) {
-            inpDetail[j].textContent = items[ind].details[0][j + 1];
+          inp.textContent = items[ind].details[0];
+          for (let j = 0; j < items[ind].details.length - 1; j += 1) {
+            inpDetail[j].textContent = items[ind].details[j + 1];
           }
           p.textContent = items[ind].info;
           for (let j = 0; j < items[ind].tech.length; j += 1) {
@@ -306,20 +298,21 @@ addAttributes();
 
 const sec = document.querySelectorAll('*');
 sec.forEach((section) => {
-  section.addEventListener('mouseenter', () => {
-    id = section.getAttribute('id');
-    if (id === 'about-myself') {
-      lin[0].classList.remove('active-page');
-      lin[1].classList.add('active-page');
-      lin[2].classList.remove('active-page');
-    } else if (id === 'contact') {
-      lin[0].classList.remove('active-page');
-      lin[1].classList.remove('active-page');
-      lin[2].classList.add('active-page');
-    } else if (id != null) {
-      lin[0].classList.add('active-page');
-      lin[1].classList.remove('active-page');
-      lin[2].classList.remove('active-page');
-    }
-  });
+  section.addEventListener('mouseenter',
+    () => {
+      const id = section.getAttribute('id');
+      if (id === 'about-myself') {
+        lin[0].classList.remove('active-page');
+        lin[1].classList.add('active-page');
+        lin[2].classList.remove('active-page');
+      } else if (id === 'contact') {
+        lin[0].classList.remove('active-page');
+        lin[1].classList.remove('active-page');
+        lin[2].classList.add('active-page');
+      } else if (id != null) {
+        lin[0].classList.add('active-page');
+        lin[1].classList.remove('active-page');
+        lin[2].classList.remove('active-page');
+      }
+    });
 });

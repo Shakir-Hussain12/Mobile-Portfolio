@@ -96,7 +96,7 @@ li {
 }
 
 header.active,
-.wrapper.active section:not(#showmenu){
+.wrapper.active section:not(#showmenu) {
   filter: blur(3px);
 }
 
@@ -137,6 +137,11 @@ header {
 
 .page-flow {
   display: none;
+}
+
+.inside * {
+  list-style: disc;
+  margin: 0 7%;
 }
 
 .page-flow.active {
@@ -372,11 +377,6 @@ h1 {
   display: flex;
   padding-inline-start: 5%;
   min-width: 67%;
-}
-
-.inside * {
-  list-style: disc;
-  margin: 0 7%;
 }
 
 .description {
@@ -681,12 +681,12 @@ button:disabled {
   }
 
   .showtext > p {
-    margin-top: -2%;
+    margin-top: 0;
   }
 
   .showdescription {
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     padding: 2%;
   }
@@ -930,11 +930,5 @@ button:disabled {
   .about {
     padding: 0 5%;
     padding-bottom: 5%;
-  }
-}
-
-@media (min-width:1100px) {
-  .showtext {
-    margin-top: -2%;
   }
 }
