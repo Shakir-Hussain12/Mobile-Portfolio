@@ -325,16 +325,16 @@ const form = document.querySelector('#myform');
 const uEmail = document.querySelector('#email');
 const html = document.querySelector('html');
 
-form.onsubmit = (event) =>{
-    event.preventDefault();
-    let str = uEmail.value.toLowerCase();
-    if(uEmail.value != str){
-        errDisplay.classList.add('active');
-    } else {
-        form.submit();
-    }
-}
+form.onsubmit = (event) => {
+  event.preventDefault();
+  const str = uEmail.value.toLowerCase();
+  if (uEmail.value !== str) {
+    errDisplay.classList.add('active');
+  } else {
+    form.submit();
+  }
+};
 
 html.onclick = () => {
-    errDisplay.classList.remove('active');
-}
+  errDisplay.classList.remove('active');
+};
