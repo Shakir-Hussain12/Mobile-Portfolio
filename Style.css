@@ -194,7 +194,7 @@ h1 {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   background-color: white;
   border: 1px solid #ebecf0;
@@ -214,15 +214,15 @@ h1 {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-  padding-inline-start: 5%;
   margin-bottom: 1px;
   color: #172b4d;
+  padding-inline-start: 2%;
 }
 
 .showthumbnail > img {
-  width: 90%;
+  width: 98%;
   height: auto;
-  padding-inline-start: 5%;
+  padding-inline-start: 2%;
 }
 
 .showoutside {
@@ -234,7 +234,7 @@ h1 {
   font-size: 13px;
   line-height: 16px;
   color: #344563;
-  padding-inline-start: 5%;
+  padding-inline-start: 2%;
 }
 
 .showinside {
@@ -258,7 +258,6 @@ h1 {
   font-size: 15px;
   line-height: 24px;
   color: #344563;
-  padding-inline-start: 5%;
 }
 
 .showtech {
@@ -266,14 +265,11 @@ h1 {
   flex-wrap: wrap;
   padding-inline-start: 0;
   gap: 3%;
+  padding-bottom: 20px;
 }
 
 .skill-list > ul {
   padding-inline-start: 2%;
-}
-
-.showbuttons {
-  padding-inline-start: 5%;
 }
 
 .showbuttons > ul:nth-child(2) {
@@ -375,7 +371,6 @@ h1 {
 
 .inside {
   display: flex;
-  padding-inline-start: 5%;
   min-width: 67%;
 }
 
@@ -555,6 +550,27 @@ button {
   border-radius: 10px;
 }
 
+.message {
+  visibility: hidden;
+}
+
+.message.active {
+  visibility: visible;
+  position: relative;
+  top: -25vh;
+  left: 40%;
+  height: 15vh;
+  border-radius: 150px 80px 100px 15px;
+  text-align: center;
+  padding: 7%;
+  border: none;
+  background: red;
+}
+
+#innermsg {
+  font-size: 0.8rem;
+}
+
 /* effects */
 .normal-button:hover,
 .resume-button:hover {
@@ -653,6 +669,10 @@ button:disabled {
   }
 
   /* pop-up menu */
+  #showDetails.activate {
+    width: 80%;
+  }
+
   .showtitle {
     font-size: 40px;
     line-height: 52px;
@@ -677,7 +697,7 @@ button:disabled {
     width: auto;
     font-size: 16px;
     line-height: 30px;
-    padding-inline-start: 3%;
+    padding-inline-start: 2%;
   }
 
   .showtext > p {
@@ -689,9 +709,6 @@ button:disabled {
     align-items: flex-start;
     flex-direction: row;
     padding: 2%;
-  }
-
-  .showbuttons {
     padding-inline-start: 0;
   }
 
