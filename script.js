@@ -1,13 +1,9 @@
 const nav = document.querySelector('.page-flow');
 const ham = document.querySelector('.hamburger');
 const body = document.querySelector('body');
-const sec = document.querySelectorAll('*');
 const show = document.querySelector('#showDetails');
 const btnCollapse = document.querySelector('.closeBtn');
 const head = document.querySelector('header');
-
-let li = document.querySelectorAll('.page-flow > li');
-let navId;
 let screenWidth = window.innerWidth;
 
 const items = [];
@@ -162,47 +158,6 @@ window.onresize = () => {
   }
 };
 
-function addAttributes() {
-  ham.addEventListener('click',
-    () => {
-      if (screenWidth < 768) {
-        nav.classList.toggle('active');
-        ham.classList.toggle('active');
-        body.classList.toggle('b_active');
-        li.forEach((n) => {
-          n.addEventListener('click',
-            () => {
-              remAttributes();
-            });
-        });
-      } else {
-        remAttributes();
-      }
-    });
-}
-
-addAttributes();
-
-sec.forEach((section) => {
-  section.addEventListener('mouseenter',
-    () => {
-      navId = section.getAttribute('navId');
-      if (navId === 'about-myself') {
-        li[0].classList.remove('active-page');
-        li[1].classList.add('active-page');
-        li[2].classList.remove('active-page');
-      } else if (navId === 'contact') {
-        li[0].classList.remove('active-page');
-        li[1].classList.remove('active-page');
-        li[2].classList.add('active-page');
-      } else if (navId != null) {
-        li[0].classList.add('active-page');
-        li[1].classList.remove('active-page');
-        li[2].classList.remove('active-page');
-      }
-    });
-});
-
 const wrap = document.querySelector('.wrapper');
 btnCollapse.addEventListener('click',
   () => {
@@ -260,7 +215,7 @@ items.forEach((item) => {
   title.textContent = item.title;
   let ul = d1.appendChild(createElem('ul',
     'frame-2'));
-  li = createElem('li',
+  let li = createElem('li',
     'client');
   li.textContent = item.details[0][0];
   ul.appendChild(li);
@@ -326,4 +281,45 @@ btnExpand.forEach((button) => {
         }
       }
     });
+});
+
+const lin = document.querySelectorAll('.page-flow > li');
+function addAttributes() {
+  ham.addEventListener('click',
+    () => {
+      if (screenWidth < 768) {
+        nav.classList.toggle('active');
+        ham.classList.toggle('active');
+        body.classList.toggle('b_active');
+        lin.forEach((n) => {
+          n.addEventListener('click',
+            () => {
+              remAttributes();
+            });
+        });
+      } else {
+        remAttributes();
+      }
+    });
+}
+addAttributes();
+
+const sec = document.querySelectorAll('*');
+sec.forEach((section) => {
+  section.addEventListener('mouseenter', () => {
+    id = section.getAttribute('id');
+    if (id === 'about-myself') {
+      lin[0].classList.remove('active-page');
+      lin[1].classList.add('active-page');
+      lin[2].classList.remove('active-page');
+    } else if (id === 'contact') {
+      lin[0].classList.remove('active-page');
+      lin[1].classList.remove('active-page');
+      lin[2].classList.add('active-page');
+    } else if (id != null) {
+      lin[0].classList.add('active-page');
+      lin[1].classList.remove('active-page');
+      lin[2].classList.remove('active-page');
+    }
+  });
 });
