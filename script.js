@@ -6,7 +6,6 @@ const btnCollapse = document.querySelector('.closeBtn');
 const head = document.querySelector('header');
 let screenWidth = window.innerWidth;
 
-
 const items = [
   {
     title: 'Tonic',
@@ -35,7 +34,7 @@ const items = [
         './desktop-images/Live_btn.png',
         './desktop-images/Source_Btn.png',
       ],
-    ]
+    ],
   },
   {
     title: 'Multi Post Stories',
@@ -65,7 +64,7 @@ const items = [
         './desktop-images/Live_btn.png',
         './desktop-images/Source_Btn.png',
       ],
-    ]
+    ],
   },
   {
     title: 'Facebook 360',
@@ -127,8 +126,8 @@ const items = [
         './desktop-images/Source_Btn.png',
       ],
     ],
-  }
-]
+  },
+];
 
 // Hamburger
 
