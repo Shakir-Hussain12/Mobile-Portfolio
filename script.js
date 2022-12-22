@@ -319,3 +319,22 @@ sec.forEach((section) => {
       }
     });
 });
+
+const errDisplay = document.querySelector('.message');
+const form = document.querySelector('#myform');
+const uEmail = document.querySelector('#email');
+const html = document.querySelector('html');
+
+form.onsubmit = (event) => {
+  event.preventDefault();
+  const str = uEmail.value.toLowerCase();
+  if (uEmail.value !== str) {
+    errDisplay.classList.add('active');
+  } else {
+    form.submit();
+  }
+};
+
+html.onclick = () => {
+  errDisplay.classList.remove('active');
+};

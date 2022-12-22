@@ -550,6 +550,29 @@ button {
   border-radius: 10px;
 }
 
+.message {
+  visibility: hidden;
+}
+
+.message.active {
+  visibility: visible;
+  position: relative;
+  top: -25vh;
+  left: 40%;
+  height: 15vh;
+  border-radius: 150px 80px 100px 15px;
+  text-align: center;
+  padding: 7%;
+  border: none;
+  background: red;
+  max-width: 65%;
+  font-size: 0.7rem;
+}
+
+#innermsg {
+  font-size: 0.6rem;
+}
+
 /* effects */
 .normal-button:hover,
 .resume-button:hover {
