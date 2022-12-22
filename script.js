@@ -266,7 +266,7 @@ btnExpand.forEach((button) => {
           title.textContent = items[ind].title;
           const [, u2] = items[ind].url;
           thumb.children[0].src = u2;
-          const [tit, ,] = items[ind].details;
+          const tit = items[ind].details[0];
           inp.textContent = tit;
           for (let j = 0; j < items[ind].details.length - 1; j += 1) {
             inpDetail[j].textContent = items[ind].details[j + 1];
