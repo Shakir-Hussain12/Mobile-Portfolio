@@ -210,16 +210,23 @@ items.forEach((item) => {
     'frame-2'));
   let li = createElem('li',
     'client');
-  li.textContent = item.details[0];
+  const [
+    tit,
+    det1,
+    det2,
+  ] = item.details;
+  li.textContent = tit;
   ul.appendChild(li);
   const ul1 = createElem('ul',
     'inside');
-  for (let ind = 1; ind < 3; ind += 1) {
-    li = createElem('li',
-      'details');
-    li.textContent = item.details[ind];
-    ul1.appendChild(li);
-  }
+  li = createElem('li',
+    'details');
+  li.textContent = det1;
+  ul1.appendChild(li);
+  li = createElem('li',
+    'details');
+  li.textContent = det2;
+  ul1.appendChild(li);
   ul.appendChild(ul1);
   const p = d1.appendChild(createElem('p',
     'description'));
@@ -257,8 +264,10 @@ btnExpand.forEach((button) => {
       for (let ind = 0; ind < items.length; ind += 1) {
         if (items[ind].title.includes(check)) {
           title.textContent = items[ind].title;
-          thumb.children[0].src = items[ind].url[1];
-          inp.textContent = items[ind].details[0];
+          const [, u2] = items[ind].url;
+          thumb.children[0].src = u2;
+          const [tit, ,] = items[ind].details;
+          inp.textContent = tit;
           for (let j = 0; j < items[ind].details.length - 1; j += 1) {
             inpDetail[j].textContent = items[ind].details[j + 1];
           }
