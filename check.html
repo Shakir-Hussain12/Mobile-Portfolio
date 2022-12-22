@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message.active {
+            border: solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="validForm" onsubmit="return validateForm()">
+        <input type="text" value="shakir" name="user_name">
+        <input type="email" id="email" value="Shakir@gmail.com" name="userEmail">
+        <button type="submit" >submit</button>
+        <span class="message">
+            Email should be in lowercase
+        </span>
+    </form>
+
+    <script>
+        const check = document.querySelector('.message');
+        validateForm = () => {
+            let email = document.forms.validForm.userEmail.value;
+            let str = email.toLowerCase();
+            if(email != str){
+                check.classList.toggle('active');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
