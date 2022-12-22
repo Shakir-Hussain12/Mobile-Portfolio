@@ -50,19 +50,19 @@
 
 /* images */
 .img1 {
-  content: url("./images/Snapshoot Portfolio.png");
+  content: url("./images/SnapshootPortfolio.png");
 }
 
 .img2 {
-  content: url("./images/Snapshoot Portfolio-2.png");
+  content: url("./images/SnapshootPortfolio-2.png");
 }
 
 .img3 {
-  content: url("./images/Snapshoot Portfolio-1.png");
+  content: url("./images/SnapshootPortfolio-1.png");
 }
 
 .img4 {
-  content: url("./images/Snapshoot Portfolio-3.png");
+  content: url("./images/SnapshootPortfolio-3.png");
 }
 
 body {
@@ -93,6 +93,11 @@ li {
   width: 378px;
   margin: 0 auto;
   border: 1px solid gray;
+}
+
+header.active,
+.wrapper.active section:not(#showmenu){
+  filter: blur(3px);
 }
 
 header {
@@ -151,7 +156,7 @@ header {
   line-height: 44px;
 }
 
-.showdetails > * {
+.showinside > * {
   list-style: disc;
 }
 
@@ -180,24 +185,23 @@ h1 {
 
 #showDetails.activate {
   position: relative;
-  top: -6vh;
+  top: 8vh;
   z-index: 1;
   display: flex;
   flex-direction: column;
   width: 95%;
-  margin: 40px auto;
+  margin: 0 auto;
   background-color: white;
   border: 1px solid #ebecf0;
-  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  box-shadow: 0 48px 48px rgb(37 47 137 / 8%);
   border-radius: 16px;
 }
 
 .closeBtn {
-  width: 10%;
+  width: 8%;
   position: absolute;
   right: 4%;
   top: 2%;
-  background-color: black;
   cursor: pointer;
 }
 
@@ -205,7 +209,7 @@ h1 {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
-  padding-inline-start: 3%;
+  padding-inline-start: 5%;
   margin-bottom: 1px;
   color: #172b4d;
 }
@@ -228,7 +232,7 @@ h1 {
   padding-inline-start: 5%;
 }
 
-.showdetails {
+.showinside {
   display: flex;
   justify-content: space-evenly;
   min-width: 65%;
@@ -249,6 +253,7 @@ h1 {
   font-size: 15px;
   line-height: 24px;
   color: #344563;
+  padding-inline-start: 5%;
 }
 
 .showtech {
@@ -262,11 +267,14 @@ h1 {
   padding-inline-start: 2%;
 }
 
+.showbuttons {
+  padding-inline-start: 5%;
+}
+
 .showbuttons > ul:nth-child(2) {
   display: flex;
   flex-wrap: nowrap;
   padding-inline-start: 0;
-  margin-top: 3%;
   gap: 2%;
 }
 
@@ -360,6 +368,17 @@ h1 {
   color: #71869a;
 }
 
+.inside {
+  display: flex;
+  padding-inline-start: 5%;
+  min-width: 67%;
+}
+
+.inside * {
+  list-style: disc;
+  margin: 0 7%;
+}
+
 .description {
   font-style: normal;
   font-weight: 400;
@@ -370,6 +389,7 @@ h1 {
 
 .tags {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   gap: 10px;
 }
@@ -643,7 +663,7 @@ button:disabled {
     line-height: 20px;
   }
 
-  .showdetails {
+  .showinside {
     min-width: 30%;
     padding-inline-start: 0;
   }
@@ -652,7 +672,7 @@ button:disabled {
     width: 80%;
     font-size: 16px;
     line-height: 30px;
-    padding-inline-start: 5%;
+    padding-inline-start: 3%;
   }
 
   .showdescription {
@@ -662,6 +682,7 @@ button:disabled {
 
   .showbuttons {
     margin-top: 3%;
+    padding-inline-start: 0;
   }
 
   .headline {
@@ -727,26 +748,6 @@ button:disabled {
     margin-bottom: 0;
   }
 
-  .title2,
-  .title3 {
-    visibility: hidden;
-    margin-bottom: -4vh;
-  }
-
-  .title2::after,
-  .title3::after {
-    content: "Facebook 360";
-    visibility: visible;
-    display: block;
-    position: relative;
-    top: -2vh;
-    left: 0;
-  }
-
-  .title3::after {
-    content: "Uber Navigation";
-  }
-
   .description {
     font-size: 1em;
     line-height: 1rem;
@@ -776,45 +777,6 @@ button:disabled {
   .details {
     font-weight: 400;
     color: #6b778c;
-  }
-
-  .client2,
-  .client4 {
-    visibility: hidden;
-  }
-
-  .client2::after,
-  .client4::after {
-    visibility: visible;
-    display: block;
-    position: relative;
-    top: -1.5vh;
-    left: 0;
-    content: "FACEBOOK";
-  }
-
-  .client4::after {
-    content: "UBER";
-    padding-inline-start: 30%;
-  }
-
-  .role,
-  .end-role {
-    visibility: hidden;
-  }
-
-  .role::after,
-  .end-role::after {
-    visibility: visible;
-    display: block;
-    position: relative;
-    top: -1.5vh;
-    left: 0;
-    content: "Full Stack Dev";
-  }
-
-  .end-role::after {
-    content: "Lead Developer";
   }
 
   .tags {
@@ -931,7 +893,7 @@ button:disabled {
     max-width: 55%;
   }
 
-  .showdetails {
+  .showinside {
     min-width: 25%;
   }
 }
