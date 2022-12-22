@@ -565,10 +565,12 @@ button {
   padding: 7%;
   border: none;
   background: red;
+  max-width: 65%;
+  font-size: 0.7rem;
 }
 
 #innermsg {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 /* effects */
